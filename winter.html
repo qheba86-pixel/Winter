@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>winter | ملابس الشتاء</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600&family=Lalezar&family=Tajawal:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--ink:#4a2c1d;--red:#b3202e;--flake:#a9cbe6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:#fff;color:var(--ink);font-family:'Tajawal',sans-serif;font-size:18px;line-height:1.7;overflow-x:hidden;min-height:100vh}
+.snow{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.snow svg{position:absolute;top:-30px;color:var(--flake);animation:fall linear infinite}
+@keyframes fall{to{transform:translate(var(--dx),110vh) rotate(var(--rot))}}
+header,main,footer{position:relative;z-index:1;max-width:1050px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding-top:22px}
+.logo{font-family:'Fraunces',serif;font-style:italic;font-size:2.2rem;color:var(--red);direction:ltr}
+nav{display:flex;gap:22px}
+nav a{color:var(--ink);text-decoration:none;font-weight:500}
+nav a:hover,nav a:focus-visible{color:var(--red);outline:none;text-decoration:underline}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:20px;padding:40px 0 30px}
+h1{font-family:'Lalezar',sans-serif;font-weight:400;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.15;margin:0 0 12px}
+.hero p{max-width:30ch;margin:0 0 24px}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:12px 30px;border-radius:40px;text-decoration:none;font-weight:500}
+.btn:hover,.btn:focus-visible{background:#8f1824;outline:3px solid #f2c9cd}
+.scene{position:relative;display:flex;justify-content:center;padding:30px 0}
+.mug{width:min(380px,85%);height:auto;overflow:visible}
+.steam path{fill:none;stroke:#c9d9e6;stroke-width:6;stroke-linecap:round;opacity:0;animation:steam 4s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:1.3s}.steam path:nth-child(3){animation-delay:2.6s}
+@keyframes steam{0%{opacity:0;transform:translateY(12px)}40%{opacity:.9}100%{opacity:0;transform:translateY(-26px)}}
+.deco{position:absolute;pointer-events:none;animation:bob 6s ease-in-out infinite}
+.d1{width:62px;top:0;left:0;rotate:-18deg}
+.d2{width:66px;top:46%;right:-4%;animation-delay:1s}
+.d3{width:64px;top:2%;right:0;animation-delay:2s}
+.d4{width:60px;bottom:0;right:2%;rotate:22deg;animation-delay:3s}
+.d5{width:52px;top:22%;left:-6%;animation-delay:1.6s}
+@keyframes bob{50%{transform:translateY(-10px)}}
+h2{font-family:'Lalezar',sans-serif;font-weight:400;font-size:2rem;margin:30px 0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.card{background:#fff;border-radius:22px;padding:14px 14px 18px;border:2px solid #f3dfe0}
+.card .pic{height:160px;border-radius:16px;display:grid;place-items:center;font-size:4.4rem;margin-bottom:10px}
+.card h3{margin:0;font-size:1.1rem}
+.card span{color:var(--red);font-weight:500}
+footer{text-align:center;padding:50px 20px 40px}
+.row{display:flex;justify-content:center;align-items:flex-end;gap:14px;margin-bottom:10px}
+.row svg{height:70px;width:auto}
+footer .stripe{height:14px;margin:0 auto 18px;max-width:420px;border-radius:8px;background:repeating-linear-gradient(135deg,var(--red) 0 14px,#fff 14px 28px);border:2px solid var(--red)}
+.scene{cursor:pointer}.scene:focus-visible{outline:3px solid #f2c9cd;border-radius:24px}
+.mug{position:relative;top:0;animation:drop 1.1s cubic-bezier(.3,1.5,.5,1) both,float 5s ease-in-out 1.3s infinite}
+@keyframes drop{0%{transform:translateY(-140px) scale(.9,1.1);opacity:0}55%{opacity:1}78%{transform:translateY(0) scale(1.08,.92)}100%{transform:none}}
+@keyframes float{50%{top:-7px}}
+.mugbody{transform-box:view-box;transform-origin:150px 270px}
+.m1,.m2,.m3{transform-box:fill-box;transform-origin:center;animation:marsh 3s ease-in-out infinite}
+.m2{animation-delay:-1s}.m3{animation-delay:-2s}
+@keyframes marsh{50%{transform:translateY(-4px) rotate(6deg)}}
+.canemug{transform-box:view-box;transform-origin:185px 100px;animation:sway 4s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(4deg)}}
+.cheer .mugbody{animation:jiggle .7s ease}
+@keyframes jiggle{20%{transform:rotate(-6deg)}40%{transform:rotate(5deg)}60%{transform:rotate(-3deg)}80%{transform:rotate(2deg)}}
+.bear{position:absolute;left:-2%;bottom:-2%;width:150px;height:auto;overflow:visible;animation:peek .9s cubic-bezier(.3,1.5,.5,1) .9s both}
+@keyframes peek{from{transform:translateY(70px) scale(.7);opacity:0}to{transform:none;opacity:1}}
+.breath{transform-box:view-box;transform-origin:70px 168px;animation:breath 3.5s ease-in-out infinite}
+@keyframes breath{50%{transform:scale(1.02,1.03)}}
+.head{transform-box:view-box;transform-origin:70px 100px;animation:tilt 5s ease-in-out infinite}
+@keyframes tilt{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+.eye{transform-box:fill-box;transform-origin:center;animation:blink 4.5s infinite}
+@keyframes blink{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
+.wave{transform-box:view-box;transform-origin:104px 126px;animation:wave 1.6s ease-in-out infinite}
+@keyframes wave{0%,100%{transform:rotate(8deg)}50%{transform:rotate(-22deg)}}
+.tail{transform-box:view-box;transform-origin:91px 116px;animation:swayt 3s ease-in-out infinite}
+@keyframes swayt{0%,100%{transform:rotate(6deg)}50%{transform:rotate(-8deg)}}
+.pom{transform-box:fill-box;transform-origin:center;animation:pom 2s ease-in-out infinite}
+@keyframes pom{50%{transform:translate(3px,3px)}}
+.cheer .bearall{animation:hop .7s ease}
+.cheer .wave{animation-duration:.4s}
+@keyframes hop{30%{transform:translateY(-28px)}60%{transform:translateY(0)}80%{transform:translateY(-9px)}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+header{flex-wrap:wrap;gap:12px}
+.tools{display:flex;align-items:center;gap:8px;flex:1;justify-content:flex-end;min-width:250px}
+.search{flex:1;max-width:260px}
+.field,.search input{width:100%;font:inherit;padding:9px 16px;border:2px solid #f3dfe0;border-radius:24px;background:#fff;color:var(--ink)}
+textarea.field{border-radius:18px}.field{margin-bottom:10px}
+input:focus,textarea:focus,button:focus-visible{outline:3px solid #f2c9cd}
+.hbtn{position:relative;font:inherit;border:2px solid #f3dfe0;background:#fff;border-radius:30px;padding:6px 14px;cursor:pointer;color:var(--ink)}
+.hbtn:hover{border-color:var(--red)}
+.badge{position:absolute;top:-9px;left:-7px;background:var(--red);color:#fff;border-radius:12px;font-size:.75rem;min-width:20px;line-height:20px;text-align:center}
+.btn2{border:0;cursor:pointer;font:inherit;font-weight:500}
+.ghost{background:none;border:0;color:var(--red);cursor:pointer;font:inherit;text-decoration:underline;padding:0}
+a.card{display:block;color:inherit;text-decoration:none;transition:transform .2s,border-color .2s}
+a.card:hover,a.card:focus-visible{transform:translateY(-4px);border-color:var(--red);outline:none}
+.stars{color:#f0a500;letter-spacing:2px}.stars small{color:var(--ink);letter-spacing:0}
+.cform{max-width:520px}#cmsg{color:var(--red);font-weight:500}
+.pv{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:24px 0}
+.pv .big{height:340px;border-radius:26px;display:grid;place-items:center;font-size:9rem}
+.pv h1{font-size:2.3rem;margin:0}.price{color:var(--red);font-size:1.6rem;font-weight:500}
+.sizes{display:flex;gap:8px;margin:12px 0 18px}
+.sizes button,.rate button{font:inherit;border:2px solid #f3dfe0;background:#fff;border-radius:12px;padding:4px 14px;cursor:pointer;color:var(--ink)}
+.sizes button.on{background:var(--red);border-color:var(--red);color:#fff}
+.rate button{border:0;font-size:1.8rem;color:#ccc;padding:0 2px}.rate button.on{color:#f0a500}
+.rev{border-bottom:1px solid #f3dfe0;padding:10px 0}
+.ov{position:fixed;inset:0;background:#0006;z-index:60;display:none}.ov.open{display:block}
+.drawer{position:fixed;top:0;bottom:0;left:0;width:min(380px,100%);background:#fff;z-index:70;padding:20px;transform:translateX(-105%);transition:transform .3s;display:flex;flex-direction:column;visibility:hidden}
+.drawer.open{transform:none;visibility:visible}
+.dh{display:flex;justify-content:space-between;align-items:center}.dh h2{margin:0}
+#cbody{flex:1;overflow:auto}
+.line{display:grid;grid-template-columns:48px 1fr auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid #f3dfe0}
+.le{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:1.7rem}
+.qty{display:flex;align-items:center;gap:8px}.qty button{width:28px;height:28px;border-radius:50%;border:2px solid #f3dfe0;background:#fff;cursor:pointer;font:inherit;color:var(--ink)}
+.total{display:flex;justify-content:space-between;font-weight:500;font-size:1.2rem;padding:12px 0}
+.modal{position:fixed;inset:0;z-index:80;display:none;place-items:center;background:#0006;padding:20px}.modal.open{display:grid}
+.mbox{background:#fff;border-radius:26px;padding:26px;width:min(400px,100%);text-align:center}
+.mbox h2{margin:0 0 6px}.mbox .btn{width:100%;margin-top:4px}
+@media (max-width:760px){.pv{grid-template-columns:1fr}.tools{min-width:100%}.search{max-width:none}}
+.bell{position:absolute;left:50%;top:-4px;width:84px;margin-left:-42px;opacity:0;pointer-events:none;z-index:3;transform:scale(0)}
+.bell.on{animation:bellin var(--dur,12s) ease forwards}
+.bell.on .bsw{animation:swing .64s ease-in-out infinite alternate}
+.bsw{transform-box:view-box;transform-origin:50px 10px}
+@keyframes bellin{0%{opacity:0;transform:scale(0)}2%{opacity:1;transform:scale(1.15)}3.5%{transform:scale(1)}93%{opacity:1;transform:scale(1)}100%{opacity:0;transform:translateY(-10px) scale(1)}}
+@keyframes swing{from{transform:rotate(-14deg)}to{transform:rotate(14deg)}}
+.hint{position:absolute;left:50%;top:68%;z-index:4;pointer-events:none;color:#fff;font-size:1.35rem;font-weight:700;text-shadow:0 1px 5px #0005;white-space:nowrap;animation:hintp 1.6s ease-in-out infinite;transition:opacity .4s}
+.hint.gone{opacity:0;animation:none;transform:translateX(-50%)}
+@keyframes hintp{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.1)}}
+@media (max-width:760px){.hero{grid-template-columns:1fr;text-align:center}.hero p{margin-inline:auto}nav{gap:14px}}
+</style>
+</head>
+<body>
+<div class="snow" id="snow" aria-hidden="true"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<pattern id="stripes" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(40)">
+<rect width="18" height="18" fill="#fff"/><rect width="9" height="18" fill="#d01c30"/>
+</pattern>
+<symbol id="flake" viewBox="-50 -50 100 100">
+<g stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none">
+<g id="arm"><path d="M0 0V-44M0 -16L-11 -27M0 -16L11 -27M0 -30L-8 -38M0 -30L8 -38"/></g>
+<use href="#arm" transform="rotate(60)"/><use href="#arm" transform="rotate(120)"/><use href="#arm" transform="rotate(180)"/><use href="#arm" transform="rotate(240)"/><use href="#arm" transform="rotate(300)"/>
+</g>
+</symbol>
+<symbol id="cane" viewBox="0 0 80 140">
+<path d="M28 132V46a20 20 0 0 1 40 0" fill="none" stroke="#8f1824" stroke-width="19" stroke-linecap="round"/>
+<path d="M28 132V46a20 20 0 0 1 40 0" fill="none" stroke="url(#stripes)" stroke-width="14" stroke-linecap="round"/>
+</symbol>
+<symbol id="cookie" viewBox="0 0 80 80">
+<circle cx="40" cy="40" r="35" fill="#a8672a"/><circle cx="40" cy="40" r="32" fill="#e0a762"/>
+<g fill="#4b2415"><path d="M24 26l8-3 4 7-7 4z"/><path d="M50 22l7 3-1 8-8-2z"/><path d="M52 46l8 2-2 8-8-3z"/><path d="M26 50l8-1 2 8-8 1z"/><path d="M40 36l6 1-1 6-6-1z"/></g>
+</symbol>
+<symbol id="ginger" viewBox="0 0 80 100">
+<g stroke="#9a5a22" stroke-width="22" stroke-linecap="round" fill="#9a5a22">
+<circle cx="40" cy="20" r="21"/><path d="M40 36V66M16 44L64 44M30 68L25 88M50 68L55 88"/>
+</g>
+<g stroke="#d9a15e" stroke-width="16" stroke-linecap="round" fill="#d9a15e">
+<circle cx="40" cy="20" r="16"/><path d="M40 36V66M17 44L63 44M30 68L25 87M50 68L55 87"/>
+</g>
+<g fill="#fff"><circle cx="33" cy="17" r="3"/><circle cx="47" cy="17" r="3"/></g>
+<path d="M32 26q8 7 16 0" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+<g fill="#d01c30"><circle cx="40" cy="48" r="4"/><circle cx="40" cy="60" r="4"/></g>
+<path d="M12 40l4 8M68 40l-4 8M21 84l8 4M59 84l-8 4" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+</symbol>
+<symbol id="iced" viewBox="0 0 80 80">
+<circle cx="40" cy="40" r="35" fill="#a8672a"/><circle cx="40" cy="40" r="32" fill="#e0a762"/>
+<path d="M40 14c6 0 8 6 14 7s11 6 8 13-2 9-4 14-8 8-14 8-8 5-14 3-10-8-10-14-6-9-3-15 7-8 12-11 5-5 11-5z" fill="#fff"/>
+<g fill="#d01c30"><circle cx="30" cy="30" r="3"/><circle cx="50" cy="28" r="3"/><circle cx="40" cy="42" r="3"/><circle cx="29" cy="50" r="3"/><circle cx="52" cy="48" r="3"/></g>
+</symbol>
+</defs>
+</svg>
+
+<header>
+  <div class="logo">winter</div>
+  <nav><a href="#new">المنتجات</a><a href="#contact">تواصل معنا</a></nav>
+  <div class="tools">
+    <label class="search"><span class="sr">بحث</span><input id="q" type="search" placeholder="ابحث عن منتج..."></label>
+    <button class="hbtn" id="acc">👤 دخول</button>
+    <button class="hbtn" id="cartb" aria-label="السلة">🛒<span class="badge" id="cnt">0</span></button>
+  </div>
+</header>
+
+<main>
+  <div id="home">
+  <section class="hero">
+    <div>
+      <h1>خليك دافي،<br>الشتا إلنا</h1>
+      <p>معاطف وكنزات وشالات ناعمة، بتحسسك إنك قاعد بكاسة هوت شوكلت.</p>
+      <a class="btn" href="#new">تسوّق الآن</a>
+    </div>
+    <div class="scene" tabindex="0" role="button" aria-label="اضغط على الدب والكاسة">
+      <svg class="deco d1" viewBox="0 0 80 140"><use href="#cane" width="80" height="140"/></svg>
+      <svg class="deco d2" viewBox="0 0 80 100"><use href="#ginger" width="80" height="100"/></svg>
+      <svg class="deco d3" viewBox="0 0 80 80"><use href="#iced" width="80" height="80"/></svg>
+      <svg class="deco d4" viewBox="0 0 80 140"><use href="#cane" width="80" height="140"/></svg>
+      <svg class="deco d5" viewBox="0 0 80 80"><use href="#cookie" width="80" height="80"/></svg>
+      <svg class="mug" viewBox="0 0 320 300" role="img" aria-label="كاسة هوت شوكلت مع مصاص كريسمس">
+        <ellipse cx="150" cy="276" rx="120" ry="14" fill="#e8eef3"/>
+        <g class="mugbody">
+        <path d="M232 112c52-8 58 64 8 78" fill="none" stroke="#8f1824" stroke-width="26" stroke-linecap="round"/>
+        <path d="M232 112c52-8 58 64 8 78" fill="none" stroke="#c4202f" stroke-width="16" stroke-linecap="round"/>
+        <path d="M54 100h192v102a62 62 0 0 1-62 62h-68a62 62 0 0 1-62-62z" fill="#c4202f" stroke="#8f1824" stroke-width="5"/>
+        <path d="M54 150h192v34H54z" fill="#fff"/>
+        <path d="M54 167l16-12 16 12 16-12 16 12 16-12 16 12 16-12 16 12 16-12 16 12 16-12 16 12" fill="none" stroke="#c4202f" stroke-width="5" stroke-linejoin="round"/>
+        <ellipse cx="150" cy="100" rx="98" ry="22" fill="#fff" stroke="#8f1824" stroke-width="5"/>
+        <ellipse cx="150" cy="100" rx="86" ry="16" fill="#6b3a22"/>
+        <g fill="#fff"><ellipse class="m1" cx="112" cy="94" rx="15" ry="11"/><ellipse class="m2" cx="148" cy="90" rx="15" ry="11"/><ellipse class="m3" cx="184" cy="96" rx="14" ry="10"/></g>
+        <g stroke="#e3d6cf" stroke-width="2" fill="none"><path d="M100 94h24M136 90h24M172 96h24"/></g>
+        <g class="canemug"><use href="#cane" x="150" y="-20" width="78" height="136" transform="rotate(14 190 90)"/></g>
+        <g class="steam"><path d="M112 66c-14-14 14-24 0-40"/><path d="M150 62c-14-14 14-24 0-40"/><path d="M188 66c-14-14 14-24 0-40"/></g>
+        </g>
+      </svg>
+      <svg class="bear" viewBox="0 0 140 172" aria-hidden="true"><g class="bearall"><g class="breath">
+        <ellipse cx="70" cy="168" rx="52" ry="5" fill="#e8eef3"/>
+        <ellipse cx="50" cy="164" rx="17" ry="9" fill="#9a5a22"/><ellipse cx="90" cy="164" rx="17" ry="9" fill="#9a5a22"/>
+        <ellipse cx="70" cy="138" rx="40" ry="30" fill="#b9763a"/><ellipse cx="70" cy="142" rx="25" ry="21" fill="#f0cfa5"/>
+        <ellipse cx="32" cy="136" rx="12" ry="21" fill="#a8672a" transform="rotate(18 32 136)"/>
+        <g class="tail"><rect x="84" y="114" width="15" height="36" rx="6" fill="url(#stripes)" stroke="#8f1824" stroke-width="2"/></g>
+        <rect x="40" y="106" width="60" height="17" rx="8.5" fill="url(#stripes)" stroke="#8f1824" stroke-width="2"/>
+        <g class="wave"><path d="M104 126L126 96" stroke="#b9763a" stroke-width="22" stroke-linecap="round"/><circle cx="127" cy="94" r="4" fill="#f0cfa5"/></g>
+        <g class="head">
+          <circle cx="28" cy="46" r="16" fill="#b9763a"/><circle cx="28" cy="46" r="8" fill="#e6b58a"/>
+          <circle cx="112" cy="46" r="16" fill="#b9763a"/><circle cx="112" cy="46" r="8" fill="#e6b58a"/>
+          <circle cx="70" cy="68" r="44" fill="#b9763a"/>
+          <ellipse cx="70" cy="84" rx="21" ry="16" fill="#f0cfa5"/><ellipse cx="70" cy="77" rx="7" ry="5" fill="#4b2415"/>
+          <path d="M70 82v5q-6 6-12 1M70 87q6 6 12 1" stroke="#4b2415" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <g fill="#2e180e"><circle class="eye" cx="54" cy="66" r="5.5"/><circle class="eye" cx="86" cy="66" r="5.5"/></g>
+          <circle cx="42" cy="82" r="6" fill="#f2a5a5" opacity=".7"/><circle cx="98" cy="82" r="6" fill="#f2a5a5" opacity=".7"/>
+          <path d="M32 50Q34 14 74 10Q108 10 110 50Z" fill="#d01c30" stroke="#8f1824" stroke-width="2"/>
+          <rect x="27" y="43" width="86" height="15" rx="7.5" fill="#fff" stroke="#e3d6cf" stroke-width="2"/>
+          <circle class="pom" cx="104" cy="14" r="9" fill="#fff" stroke="#e3d6cf" stroke-width="2"/>
+        </g>
+      </g></g></svg>
+      <svg class="bell" id="bell" viewBox="0 0 100 120" aria-hidden="true"><g class="bsw">
+        <path d="M50 10c-5 0-8 3-8 7-14 5-22 18-22 36 0 18-8 24-12 30h84c-4-6-12-12-12-30 0-18-8-31-22-36 0-4-3-7-8-7z" fill="#f2b632" stroke="#b9801a" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M32 50c0 14-4 22-8 30" stroke="#fff" stroke-opacity=".6" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <rect x="14" y="80" width="72" height="8" rx="4" fill="#e0a020" stroke="#b9801a" stroke-width="2"/>
+        <circle cx="50" cy="98" r="9" fill="#d89a1c" stroke="#b9801a" stroke-width="2"/>
+        <path d="M50 14L30 6v16zM50 14l20-8v16z" fill="#d01c30" stroke="#8f1824" stroke-width="2" stroke-linejoin="round"/><circle cx="50" cy="14" r="5" fill="#d01c30" stroke="#8f1824" stroke-width="2"/>
+      </g></svg>
+      <div class="hint" id="hint" aria-hidden="true">انقر</div>
+    </div>
+  </section>
+  <section id="new"><h2>المنتجات</h2><div class="grid" id="grid"></div></section>
+  <section id="contact"><h2>تواصل معنا</h2>
+    <form id="cf" class="cform"><input class="field" name="n" placeholder="اسمك" required><input class="field" type="email" name="e" placeholder="إيميلك" required><textarea class="field" name="m" rows="4" placeholder="رسالتك" required></textarea><button class="btn btn2">إرسال</button><p id="cmsg" role="status"></p></form>
+  </section>
+  </div>
+  <div id="pv" hidden></div>
+</main>
+<footer>
+  <div class="row" aria-hidden="true">
+    <svg viewBox="0 0 80 140" style="height:90px"><use href="#cane" width="80" height="140"/></svg>
+    <svg viewBox="0 0 80 80"><use href="#cookie" width="80" height="80"/></svg>
+    <svg viewBox="0 0 80 100"><use href="#ginger" width="80" height="100"/></svg>
+    <svg viewBox="0 0 80 80"><use href="#iced" width="80" height="80"/></svg>
+    <svg viewBox="0 0 80 140" style="height:90px"><use href="#cane" width="80" height="140"/></svg>
+  </div>
+  <div class="stripe"></div>
+  <div class="logo" style="display:inline-block">winter</div>
+  <p>موسم دافي، وأواعي بتشبهك.</p>
+</footer>
+
+<script>
+(function(){
+  var box=document.getElementById('snow'),NS='http://www.w3.org/2000/svg';
+  for(var i=0;i<28;i++){
+    var s=document.createElementNS(NS,'svg'),u=document.createElementNS(NS,'use'),z=14+Math.random()*26;
+    u.setAttribute('href','#flake');u.setAttribute('width','100');u.setAttribute('height','100');
+    s.setAttribute('viewBox','-50 -50 100 100');s.appendChild(u);
+    s.style.cssText='left:'+Math.random()*100+'%;width:'+z+'px;height:'+z+'px;opacity:'+(.45+Math.random()*.5)+';--dx:'+(Math.random()*90-45)+'px;--rot:'+(Math.random()*360-180)+'deg;animation-duration:'+(12+Math.random()*14)+'s;animation-delay:-'+Math.random()*24+'s';
+    box.appendChild(s);
+  }
+})();
+</script>
+<div class="ov" id="ov"></div>
+<aside class="drawer" id="drawer" aria-label="سلة المشتريات">
+  <div class="dh"><h2>السلة 🛒</h2><button class="ghost" id="cclose">إغلاق ✕</button></div>
+  <div id="cbody"></div>
+  <div class="total"><span>المجموع</span><span id="ctot">0 د.أ</span></div>
+  <button class="btn btn2" id="chk">إتمام الطلب</button>
+  <p id="cnote" role="status" style="color:var(--red)"></p>
+</aside>
+<div class="modal" id="auth" role="dialog" aria-label="تسجيل الدخول">
+  <form class="mbox" id="af">
+    <h2>أهلاً فيك في winter ❄️</h2><p>سجّل دخولك أو كمّل كضيف</p>
+    <input class="field" name="n" placeholder="الاسم">
+    <input class="field" type="email" name="e" placeholder="الإيميل" required>
+    <input class="field" type="password" name="p" placeholder="كلمة السر" required>
+    <button class="btn btn2">دخول</button>
+    <button type="button" class="btn btn2" id="signup" style="background:#fff;color:var(--red);border:2px solid var(--red)">إنشاء حساب</button>
+    <p id="aerr" role="alert" style="color:var(--red);margin:6px 0 0"></p>
+    <p><button type="button" class="ghost" id="guest">الدخول كضيف</button></p>
+  </form>
+</div>
+<script>
+(function(){
+  var sc=document.querySelector('.scene');
+  function cheer(){sc.classList.remove('cheer');void sc.offsetWidth;sc.classList.add('cheer');setTimeout(function(){sc.classList.remove('cheer')},900)}
+  sc.addEventListener('click',cheer);
+  sc.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();cheer()}});
+})();
+</script>
+<script>
+(function(){
+/* =====================================================
+   SUPABASE - مفاتيح المشروع
+   (مفتاح anon عام وآمن بالكود، لا تحط service_role أبداً)
+   ===================================================== */
+var SUPABASE_URL='https://ivvebyvdwazdvtaexpxg.supabase.co';
+var SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2dmVieXZkd2F6ZHZ0YWV4cHhnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTEwMDk2MDcsImV4cCI6MjEwNjU4NTYwN30.OZJjnOViIszj5XKn6glwRMsM7sNOqLW4_I46sP5l3mU';
+var sb=null;
+function initSupabase(cb){
+  if(!SUPABASE_URL||!SUPABASE_ANON_KEY)return;
+  var t=document.createElement('script');
+  t.src='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js';
+  t.onload=function(){try{sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);if(cb)cb(sb)}catch(e){sb=null}};
+  document.head.appendChild(t);
+}
+
+/* المنتجات الافتراضية (بتتبدل بمنتجات Supabase لما تتحمّل) */
+var P=[
+{id:1,n:'معطف صوف طويل',p:65,e:'🧥',c:'#f9dfe1',d:'معطف طويل من الصوف الدافي، قصّة أنيقة تناسب أبرد الأيام.'},
+{id:2,n:'كنزة تريكو ناعمة',p:28,e:'🧶',c:'#f3e6d8',d:'كنزة تريكو ناعمة وخفيفة، بتدفّي بدون ثقل.'},
+{id:3,n:'شال وقبعة',p:18,e:'🧣',c:'#e3eff8',d:'طقم شال وقبعة بقماش ناعم، هدية حلوة للشتا.'},
+{id:4,n:'قفازات مبطنة',p:12,e:'🧤',c:'#fbf0d9',d:'قفازات مبطنة من الداخل بتحمي إيديك من البرد.'},
+{id:5,n:'بوت شتوي',p:48,e:'👢',c:'#e6dccf',d:'بوت شتوي مقاوم للمطر ونعله ما بيزلق.'},
+{id:6,n:'جرابات صوف',p:6,e:'🧦',c:'#f9dfe1',d:'جرابات صوف سميكة لليالي الباردة.'},
+{id:7,n:'جاكيت مبطن',p:55,e:'🧥',c:'#dbe7f3',d:'جاكيت مبطن خفيف الوزن ودافي جداً.'},
+{id:8,n:'بيجامة دافية',p:32,e:'🌙',c:'#ece4f5',d:'بيجامة قطن مبطّنة للنوم المريح.'}];
+var Z=['S','M','L','XL'];
+function pid(id){for(var i=0;i<P.length;i++)if(P[i].id===+id)return P[i];return null}
+function ld(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
+function sv(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function esc(t){return String(t).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+var cart=ld('wcart',[]),rat=ld('wrat',{}),user=ld('wuser',null),q='',size='M',pick=0;
+var $=function(i){return document.getElementById(i)};
+function avg(id){var a=rat[id]||[];return a.length?a.reduce(function(x,y){return x+y.s},0)/a.length:0}
+function stars(n){var o='';for(var i=1;i<=5;i++)o+=i<=Math.round(n)?'★':'☆';return o}
+function rl(id){var c=(rat[id]||[]).length;return '<span class="stars">'+stars(avg(id))+' <small>'+(c?'('+c+')':'بدون تقييم')+'</small></span>'}
+function grid(){
+  var r=P.filter(function(x){return x.n.indexOf(q)>-1});
+  $('grid').innerHTML=r.length?r.map(function(x){return '<a class="card" href="#/p/'+x.id+'"><div class="pic" style="background:'+x.c+'">'+x.e+'</div><h3>'+esc(x.n)+'</h3>'+rl(x.id)+'<br><span>'+x.p+' د.أ</span></a>'}).join(''):'<p>ما لقينا منتج بهالاسم.</p>';
+}
+function showP(id){
+  var x=pid(id);if(!x){location.hash='#/';return}
+  size='M';pick=0;var rv=rat[id]||[];
+  $('pv').innerHTML='<p><a href="#/" class="ghost">› رجوع للمنتجات</a></p><div class="pv"><div class="big" style="background:'+x.c+'">'+x.e+'</div><div><h1>'+esc(x.n)+'</h1>'+rl(id)+'<p>'+esc(x.d)+'</p><div class="price">'+x.p+' د.أ</div><p>المقاس:</p><div class="sizes">'+Z.map(function(z){return '<button type="button" data-z="'+z+'" class="'+(z===size?'on':'')+'">'+z+'</button>'}).join('')+'</div><button class="btn btn2" id="add">أضف للسلة 🛒</button><p id="amsg" role="status" style="color:var(--red)"></p></div></div><h2>التقييمات</h2><form id="rf"><div class="rate" aria-label="اختار تقييمك">'+[1,2,3,4,5].map(function(i){return '<button type="button" data-s="'+i+'" aria-label="'+i+' نجوم">★</button>'}).join('')+'</div><textarea class="field" name="t" rows="2" maxlength="500" placeholder="رأيك بالمنتج (اختياري)"></textarea><button class="btn btn2">إرسال التقييم</button><p id="rmsg" role="status" style="color:var(--red)"></p></form><div>'+(rv.length?rv.slice().reverse().map(function(r){return '<div class="rev"><span class="stars">'+stars(r.s)+'</span> <b>'+esc(r.u)+'</b><br>'+esc(r.t)+'</div>'}).join(''):'<p>كون أول واحد يقيّم هالمنتج.</p>')+'</div>';
+  $('pv').dataset.id=id;
+}
+function route(){
+  var h=location.hash,m=h.match(/^#\/p\/(\d+)/);
+  $('home').hidden=!!m;$('pv').hidden=!m;
+  if(m){showP(+m[1]);window.scrollTo(0,0)}
+  else{grid();var t=h==='#new'||h==='#contact'?$(h.slice(1)):null;if(t)t.scrollIntoView()}
+}
+window.addEventListener('hashchange',route);
+function cartUI(){
+  cart=cart.filter(function(l){return pid(l.id)});
+  var t=0,n=0;
+  $('cbody').innerHTML=cart.length?cart.map(function(l,i){var x=pid(l.id);t+=x.p*l.q;n+=l.q;return '<div class="line"><span class="le" style="background:'+x.c+'">'+x.e+'</span><div><b>'+esc(x.n)+'</b><br><small>المقاس '+l.z+' · '+x.p+' د.أ</small></div><div class="qty"><button data-i="'+i+'" data-d="-1" aria-label="أقل">−</button>'+l.q+'<button data-i="'+i+'" data-d="1" aria-label="أكثر">+</button></div></div>'}).join(''):'<p>السلة فاضية.</p>';
+  $('ctot').textContent=t+' د.أ';$('cnt').textContent=n;sv('wcart',cart);
+}
+function note(t){$('cnote').textContent=t}
+function drawer(o){$('drawer').classList.toggle('open',o);$('ov').classList.toggle('open',o);if(o){note('');$('cclose').focus()}}
+$('cartb').onclick=function(){drawer(true)};$('cclose').onclick=$('ov').onclick=function(){drawer(false)};
+$('cbody').onclick=function(e){var b=e.target.closest('button');if(!b)return;var l=cart[+b.dataset.i];l.q+=+b.dataset.d;if(l.q<1)cart.splice(+b.dataset.i,1);cartUI()};
+$('chk').onclick=function(){
+  if(!cart.length){note('السلة فاضية.');return}
+  if(!sb){cart=[];cartUI();note('تم استلام طلبك ✅ (موقع تجريبي، بدون دفع فعلي)');return}
+  var btn=$('chk');btn.disabled=true;
+  sb.rpc('place_order',{p_name:user?user.name:'ضيف',p_items:cart.map(function(l){return {product_id:l.id,size:l.z,qty:l.q}})}).then(function(r){
+    btn.disabled=false;
+    if(r.error){note('ما قدرنا نرسل الطلب، جرّب مرة ثانية');return}
+    cart=[];cartUI();note('تم استلام طلبك ✅ رقم الطلب #'+r.data);
+  },function(){btn.disabled=false;note('ما قدرنا نتصل بالسيرفر')});
+};
+$('pv').onclick=function(e){
+  var z=e.target.closest('[data-z]'),s=e.target.closest('[data-s]'),id=+$('pv').dataset.id;
+  if(z){size=z.dataset.z;[].forEach.call($('pv').querySelectorAll('[data-z]'),function(b){b.classList.toggle('on',b===z)})}
+  if(s){pick=+s.dataset.s;[].forEach.call($('pv').querySelectorAll('[data-s]'),function(b){b.classList.toggle('on',+b.dataset.s<=pick)})}
+  if(e.target.id==='add'){var l=cart.filter(function(l){return l.id===id&&l.z===size})[0];if(l)l.q++;else cart.push({id:id,z:size,q:1});cartUI();$('amsg').textContent='انضاف للسلة ✅'}
+};
+$('pv').onsubmit=function(e){
+  e.preventDefault();var id=+$('pv').dataset.id;
+  if(!pick){$('rmsg').textContent='اختار عدد النجوم أول.';return}
+  var rv={s:pick,t:e.target.t.value.trim(),u:user?user.name:'ضيف'};
+  (rat[id]=rat[id]||[]).push(rv);sv('wrat',rat);showP(id);
+  if(sb)sb.from('reviews').insert({product_id:id,rating:rv.s,comment:rv.t,user_name:rv.u}).then(function(r){if(r.error)console.warn(r.error.message)});
+};
+$('q').oninput=function(){q=this.value.trim();if(location.hash.indexOf('#/p/')===0)location.hash='#/';grid();$('new').scrollIntoView()};
+
+function acc(){$('acc').textContent=user?'👤 '+user.name+' ✕':'👤 دخول'}
+function auth(o){$('auth').classList.toggle('open',o);if(o){$('aerr').textContent='';$('af').e.focus()}}
+function setUser(u){user=u?{name:(u.user_metadata&&u.user_metadata.name)||(u.email||'').split('@')[0],email:u.email}:null;sv('wuser',user);acc()}
+$('acc').onclick=function(){if(user){if(sb)sb.auth.signOut();setUser(null)}else auth(true)};
+$('guest').onclick=function(){auth(false)};
+function doAuth(mode){
+  var f=$('af'),er=$('aerr'),em=f.e.value.trim(),pw=f.p.value,nm=f.n.value.trim();er.textContent='';
+  if(!f.reportValidity())return;
+  if(!sb){user={name:nm||em.split('@')[0],email:em};sv('wuser',user);acc();auth(false);return}
+  var req=mode==='up'?sb.auth.signUp({email:em,password:pw,options:{data:{name:nm}}}):sb.auth.signInWithPassword({email:em,password:pw});
+  req.then(function(r){
+    if(r.error){er.textContent=mode==='in'&&/invalid/i.test(r.error.message)?'الإيميل أو كلمة السر غلط':'تعذر تنفيذ الطلب: '+r.error.message;return}
+    if(mode==='up'&&!(r.data&&r.data.session)){er.textContent='تم إنشاء الحساب. تحقق من إيميلك لتأكيده ثم سجّل دخولك.';return}
+    auth(false);
+  },function(){er.textContent='ما قدرنا نتصل بالسيرفر'});
+}
+$('af').onsubmit=function(e){e.preventDefault();doAuth('in')};
+$('signup').onclick=function(){doAuth('up')};
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){drawer(false);auth(false)}});
+
+$('cf').onsubmit=function(e){
+  e.preventDefault();var f=e.target,m=$('cmsg'),ok='شكراً لك! وصلتنا رسالتك ❄️';
+  if(!sb){f.reset();m.textContent=ok;return}
+  sb.from('messages').insert({name:f.n.value.trim(),email:f.e.value.trim(),message:f.m.value.trim()}).then(function(r){
+    if(r.error){m.textContent='تعذر الإرسال، جرّب مرة ثانية';return}
+    f.reset();m.textContent=ok;
+  },function(){m.textContent='تعذر الاتصال بالسيرفر'});
+};
+
+/* تحميل البيانات والمستخدم من Supabase لما يجهز */
+function remote(){
+  sb.from('products').select('*').order('id').then(function(r){
+    if(r.error||!r.data||!r.data.length)return;
+    P=r.data.map(function(x){return {id:x.id,n:x.name,p:Number(x.price),e:x.emoji||'🧥',c:x.color||'#f3e6d8',d:x.description||''}});
+    cartUI();route();
+  });
+  sb.from('reviews').select('product_id,rating,comment,user_name,created_at').order('created_at').then(function(r){
+    if(r.error||!r.data)return;
+    var m={};r.data.forEach(function(x){(m[x.product_id]=m[x.product_id]||[]).push({s:x.rating,t:x.comment||'',u:x.user_name})});
+    rat=m;sv('wrat',rat);grid();
+    if(!$('pv').hidden&&document.activeElement.tagName!=='TEXTAREA')showP(+$('pv').dataset.id);
+  });
+  sb.auth.getSession().then(function(r){setUser(r.data&&r.data.session?r.data.session.user:null)});
+  sb.auth.onAuthStateChange(function(ev,session){setUser(session?session.user:null)});
+}
+acc();cartUI();route();
+initSupabase(remote);
+})();
+</script>
+<script>
+(function(){
+  var mug=document.querySelector('.mug'),bell=document.getElementById('bell'),hint=document.getElementById('hint'),busy=false;
+  var F={C:523.25,D:587.33,E:659.25,F:698.46,G:783.99},B=.32;
+  var M=[['E',1],['E',1],['E',2],['E',1],['E',1],['E',2],['E',1],['G',1],['C',1.5],['D',.5],['E',4],
+         ['F',1],['F',1],['F',1.5],['F',.5],['F',1],['E',1],['E',1],['E',.5],['E',.5],['G',1],['G',1],['F',1],['D',1],['C',4]];
+  function play(){
+    var A=window.AudioContext||window.webkitAudioContext;if(!A)return 0;
+    var c=play.c||(play.c=new A());if(c.state==='suspended')c.resume();
+    var t=c.currentTime+.05,total=0;
+    M.forEach(function(n){
+      var f=F[n[0]],d=n[1]*B,rg=Math.min(1.6,d+.9);
+      [[1,.2],[2.01,.09],[3.02,.05],[4.2,.025]].forEach(function(p){
+        var o=c.createOscillator(),g=c.createGain();
+        o.type='sine';o.frequency.value=f*p[0];
+        g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(p[1],t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+rg);
+        o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+rg+.05);
+      });
+      t+=d;total+=d;
+    });
+    return total+1.6;
+  }
+  mug.addEventListener('click',function(){
+    hint.classList.add('gone');
+    if(busy)return;busy=true;
+    var secs=3;try{secs=play()||3}catch(e){}
+    bell.style.setProperty('--dur',secs+'s');
+    bell.classList.remove('on');void bell.getBoundingClientRect();bell.classList.add('on');
+    setTimeout(function(){bell.classList.remove('on');busy=false},secs*1000);
+  });
+})();
+</script>
+</body>
+</html>
